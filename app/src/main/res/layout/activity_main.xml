@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:background="@color/tan_background"
     android:orientation="vertical"
-    tools:context="com.example.android.miwoklanguageapp.MainActivity">
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/numbers"
         style="@style/CategoryStyle"
         android:background="@color/category_numbers"
-        android:text="@string/category_numbers" />
-        <!-- android:onClick="openNumbersList" /> -->
+        android:text="@string/category_numbers"
+        android:onClick="openNumbersList" />
 
     <TextView
         android:id="@+id/family"
