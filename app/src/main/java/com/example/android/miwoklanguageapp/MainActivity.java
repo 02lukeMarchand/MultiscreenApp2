@@ -15,14 +15,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        NumberClickListener clickListener = new NumberClickListener();
         TextView numbers = (TextView)findViewById(R.id.numbers);
 
-        numbers.setOnClickListener(clickListener);
+        numbers.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+                startActivity(numbersIntent);
+            }
+        });
+
+
+
+
     }
 
-    public void openNumbersList(View view){
-        Intent numbers = new Intent(this, NumbersActivity.class);
-        startActivity(numbers);
-    }
 }
