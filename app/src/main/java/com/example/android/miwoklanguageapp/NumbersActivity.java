@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -29,8 +31,12 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("nine");
         words.add("ten");
 
-        for (int i = 0; i < words.size(); i++){
-            Log.v("NumbersActivity", "Word at index " + i + ": " + words.get(i));
+        LinearLayout rootView = (LinearLayout)findViewById(R.id.rootView);
+        for (int i = 0; i < words.size(); i++) {
+            TextView wordView = new TextView(this);
+            wordView.setText(words.get(i));
+            rootView.addView(wordView);
         }
+
     }
 }
